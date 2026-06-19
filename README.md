@@ -64,8 +64,6 @@ The **DP Optimization Engine** is a Python desktop application that bridges the 
 
 <img width="1277" height="857" alt="image" src="https://github.com/user-attachments/assets/9e667143-a4c4-413e-b0a1-f293aadbf8a6" />
 
-```
-
 ---
 
 ## 🧮 Supported Algorithms
@@ -84,7 +82,7 @@ The toolkit implements **four classical DP algorithms**, each with three solver 
 **Input Format**: `Weights & Capacity` (e.g. `1, 2, 3 | 5`) and `Values` (e.g. `6, 10, 12`)
 
 **Recurrence**:
-```
+```text
 dp[i][j] = max(dp[i-1][j], v[i-1] + dp[i-1][j - w[i-1]])   if w[i-1] <= j
 dp[i][j] = dp[i-1][j]                                        otherwise
 ```
@@ -98,7 +96,7 @@ dp[i][j] = dp[i-1][j]                                        otherwise
 **Input Format**: `String X` (e.g. `ABCBDAB`) and `String Y` (e.g. `BDCABA`)
 
 **Recurrence**:
-```
+```text
 dp[i][j] = dp[i-1][j-1] + 1          if X[i-1] == Y[j-1]
 dp[i][j] = max(dp[i-1][j], dp[i][j-1])  otherwise
 ```
@@ -112,7 +110,7 @@ dp[i][j] = max(dp[i-1][j], dp[i][j-1])  otherwise
 **Input Format**: `Coin Denominations` (e.g. `1, 2, 5`) and `Target Amount` (e.g. `11`)
 
 **Recurrence**:
-```
+```text
 dp[i][j] = min(dp[i-1][j], 1 + dp[i][j - c[i-1]])   if c[i-1] <= j
 dp[i][j] = dp[i-1][j]                                 otherwise
 ```
@@ -126,7 +124,7 @@ dp[i][j] = dp[i-1][j]                                 otherwise
 **Input Format**: `Matrix Dimensions` (e.g. `40, 20, 30, 10, 30`)
 
 **Recurrence**:
-```
+```text
 dp[i][j] = min over k in [i, j): dp[i][k] + dp[k+1][j] + p[i-1] * p[k] * p[j]
 ```
 
@@ -147,49 +145,27 @@ dp[i][j] = min over k in [i, j): dp[i][k] + dp[k+1][j] + p[i-1] * p[k] * p[j]
 
 ```
 DeveloperToolKit/
-
 │
-
 ├── main.py                          # Startup orchestrator and CLI test-suite
-
 ├── README.md                        # This file
-
 ├── PROJECT_CONTEXT.md               # AI-readable full project context document
-
 ├── ALGORITHMS_AND_VISUALIZATION.md  # In-depth algorithm theory and visualization guide
-
 ├── TECHNICAL_README.md              # Frontend/backend design pattern reference
-
 ├── requirements.txt                 # Python package dependencies
-
 │
-
 ├── core/                            # DP algorithm backend modules (no GUI dependencies)
-
 │   ├── coinchange.py                # Coin Change — 3 solvers + path tracker
-
 │   ├── knapsack.py                  # 0/1 Knapsack — 3 solvers + path tracker
-
 │   ├── lcs.py                       # LCS — 3 solvers + path tracker
-
 │   └── matrix_chain.py              # MCM — 3 solvers + path tracker
-
 │
-
 ├── utils/                           # Tooling and analysis helpers
-
 │   ├── benchmarker.py               # Timing profiler for recursive vs. tabular solvers
-
 │   └── data_gen.py                  # (Reserved) Dataset generation utilities
-
 │
-
 └── GUI/                             # User interface layer
-
-   ── app_window.py                # Main CTk application — controller, animator, plotter
-    
-   └── visualizer.py                # Standalone canvas-based table renderer with arrows
-    
+    ├── app_window.py                # Main CTk application — controller, animator, plotter
+    └── visualizer.py                # Standalone canvas-based table renderer with arrows
 ```
 
 ### Backend API Contract
