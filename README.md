@@ -62,26 +62,8 @@ The **DP Optimization Engine** is a Python desktop application that bridges the 
 
 > *The application features a split-panel layout: a control sidebar on the left and an interactive visualization workspace on the right.*
 
-```
-+─────────────────────────────────────────────────────────────────────+
-│                      ⚡ DP Optimization Engine                       │
-+──────────────────────────+──────────────────────────────────────────+
-│  🧬 ALGORITHM            │  ◉ Interactive DP Table Visualization    │
-│  [ 0/1 Knapsack      ▼]  │  ┌──────┬──────┬──────┬──────┬──────┐   │
-│                          │  │ Base │  0   │  1   │  2   │  3   │   │
-│  📊 DATA GENERATION      │  ├──────┼──────┼──────┼──────┼──────┤   │
-│  Weights & Capacity:     │  │Item 1│  0   │  6   │  6   │  6   │   │
-│  [ 1, 2, 3 | 5       ]   │  ├──────┼──────┼──────┼──────┼──────┤   │
-│  Values:                 │  │Item 2│  0   │  6   │  10  │ [16] │   │
-│  [ 6, 10, 12         ]   │  └──────┴──────┴──────┴──────┴──────┘   │
-│                          │                                          │
-│  [ ▶  Run Analysis   ]   │  🔗 Optimal Value: 22 | Items: [1, 2]   │
-│                          │──────────────────────────────────────────│
-│  🎮 PLAYBACK             │  ◉ Algorithm Performance Benchmarking    │
-│  [▶ Play] [⏭ Step]       │                                          │
-│  Speed: ━━━●━━━  0.5s    │      Recursive O(2^N) /                  │
-│  ● Step: 12 / 24         │  DP O(N*W) ────────────                  │
-+──────────────────────────+──────────────────────────────────────────+
+<img width="1277" height="857" alt="image" src="https://github.com/user-attachments/assets/9e667143-a4c4-413e-b0a1-f293aadbf8a6" />
+
 ```
 
 ---
