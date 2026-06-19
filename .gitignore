@@ -1,0 +1,7 @@
+.idea/
+.venv/
+__pycache__/
+TECHNICAL_README.md
+ALGORITHMS_AND_VISUALIZATION.md
+PROJECT_CONTEXT.md
+prompt.txt

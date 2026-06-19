@@ -1,0 +1,6 @@
+customtkinter
+darkdetect
+numpy
+pandas
+matplotlib
+memory-profiler
