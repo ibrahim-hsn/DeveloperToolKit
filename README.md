@@ -147,27 +147,49 @@ dp[i][j] = min over k in [i, j): dp[i][k] + dp[k+1][j] + p[i-1] * p[k] * p[j]
 
 ```
 DeveloperToolKit/
+
 │
+
 ├── main.py                          # Startup orchestrator and CLI test-suite
+
 ├── README.md                        # This file
+
 ├── PROJECT_CONTEXT.md               # AI-readable full project context document
+
 ├── ALGORITHMS_AND_VISUALIZATION.md  # In-depth algorithm theory and visualization guide
+
 ├── TECHNICAL_README.md              # Frontend/backend design pattern reference
+
 ├── requirements.txt                 # Python package dependencies
+
 │
+
 ├── core/                            # DP algorithm backend modules (no GUI dependencies)
+
 │   ├── coinchange.py                # Coin Change — 3 solvers + path tracker
+
 │   ├── knapsack.py                  # 0/1 Knapsack — 3 solvers + path tracker
+
 │   ├── lcs.py                       # LCS — 3 solvers + path tracker
+
 │   └── matrix_chain.py              # MCM — 3 solvers + path tracker
+
 │
+
 ├── utils/                           # Tooling and analysis helpers
+
 │   ├── benchmarker.py               # Timing profiler for recursive vs. tabular solvers
+
 │   └── data_gen.py                  # (Reserved) Dataset generation utilities
+
 │
+
 └── GUI/                             # User interface layer
-    ├── app_window.py                # Main CTk application — controller, animator, plotter
-    └── visualizer.py                # Standalone canvas-based table renderer with arrows
+
+   ── app_window.py                # Main CTk application — controller, animator, plotter
+    
+   └── visualizer.py                # Standalone canvas-based table renderer with arrows
+    
 ```
 
 ### Backend API Contract
